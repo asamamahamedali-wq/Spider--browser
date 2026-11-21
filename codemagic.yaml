@@ -3,15 +3,20 @@ workflows:
     name: SPIDER BROWSER - PH-00 Debug APK
     max_build_duration: 60
     instance_type: mac_mini_m2
+
     scripts:
-      - name: Verify project files
+      - name: Verify Android project structure
         script: |
           test -f settings.gradle.kts
+          test -f build.gradle.kts
           test -f app/build.gradle.kts
           test -f app/src/main/AndroidManifest.xml
-      - name: Build unsigned debug APK
+          test -f app/src/main/java/com/osama/spiderbrowser/MainActivity.kt
+          test -x ./gradlew || chmod +x ./gradlew
+
+      - name: Build Debug APK
         script: |
-          chmod +x ./gradlew
           ./gradlew --no-daemon assembleDebug
+
     artifacts:
-      - app/build/outputs/**/*.apk
+      - app/build/outputs/apk/debug/*.apk

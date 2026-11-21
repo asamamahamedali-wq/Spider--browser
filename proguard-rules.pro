@@ -1,2 +1,2 @@
-# SPIDER BROWSER ProGuard rules.
-# Add narrowly scoped rules only when a release dependency requires them.
+# SPIDER BROWSER PH-00 ProGuard rules.
+# No custom shrinking rules are required for the debug proof build.
