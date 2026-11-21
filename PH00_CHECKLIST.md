@@ -1,0 +1,13 @@
+# PH-00 operator checklist
+- [ ] GitHub private repository created by owner.
+- [ ] Codemagic account connected manually by owner.
+- [ ] Only intended repository access granted.
+- [ ] Current build machine/quota reviewed; no charge accepted.
+- [ ] Project uploaded to repository.
+- [ ] Codemagic workflow detected.
+- [ ] Debug build succeeded.
+- [ ] APK artifact downloaded.
+- [ ] APK installed and launched.
+- [ ] Build log and SHA-256 recorded.
+- [ ] No secrets committed.
+- [ ] User approved PH-00 closure.
